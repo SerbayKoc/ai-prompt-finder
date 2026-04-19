@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .prompt-area {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Prompt Finder</h1>
+        <div class="prompt-area">
+            <h2>Optimize Your Prompt</h2>
+            <textarea placeholder="Enter your prompt here..."></textarea>
+            <button id="optimize-button">Optimize Prompt</button>
+        </div>
+        <div class="optimized-prompt-area">
+            <h2>Optimized Prompt</h2>
+            <textarea id="optimized-prompt" readonly></textarea>
+        </div>
+    </div>
+    <script>
+        document.getElementById('optimize-button').onclick = function() {
+            const prompt = document.querySelector('textarea').value;
+            document.getElementById('optimized-prompt').value = prompt + ' - optimized';
+        };
+    </script>
+</body>
+</html>
